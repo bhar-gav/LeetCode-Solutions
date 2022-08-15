@@ -4,6 +4,7 @@
 
 
 //Solution:
+
 class Solution {
 public:
     int search(vector<int>& nums, int target) {
@@ -18,10 +19,10 @@ public:
             if(nums[mid] == target) {
                 return mid;
             } else if(nums[mid] < target) { // target on right side of middle element
-                si += 1;
-            } else { // target on left side of middle element
-                ei -= 1;
-            }
+                 si=mid+1;//si += 1;
+			} else { // target on left side of middle element
+              ei=mid-1; // ei -= 1;
+			}
         }
 
         // target element not present in given array
